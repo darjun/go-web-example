@@ -1,0 +1,8 @@
+Pet Info:
+Name: {{ .Name }}
+Age: {{ .Age }}
+Owner:
+{{ with .Owner }}
+  Name: {{ .Name }}
+  Age: {{ .Age }}
+{{ end }}

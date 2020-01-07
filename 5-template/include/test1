@@ -1,0 +1,4 @@
+This is in test1.
+{{ template "test2" }}
+
+{{ template "test2" . }}

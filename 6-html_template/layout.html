@@ -1,0 +1,35 @@
+{{ define "layout" }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Go Web 编程之 模板（二）</title>
+</head>
+<body>
+	{{ template "header" . }}
+
+	{{ template "content" . }}
+
+	{{ template "footer" . }}
+</body>
+</html>
+{{ end }}
+
+{{ define "header" }}
+<h1>Hi, {{ .Name }}!</h1>
+{{ end }}
+
+{{ define "content" }}
+Todo:
+<ul>
+	{{ range .Todos }}
+	<li>{{ . }}</li>
+	{{ end }}
+</ul>
+{{ end }}
+
+{{ define "footer" }}
+Copyright © 2020 darjun.
+{{ end }}

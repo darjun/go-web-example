@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Go Web 编程之 模板（二）</title>
+</head>
+<body>
+	<p>Your age is: {{ . }}</p>
+	{{ if gt . 60 }}
+	<p>Old People!</p>
+	{{ else if gt . 40 }}
+	<p>Middle Aged!</p>
+	{{ else }}
+	<p>Young!</p>
+	{{ end }}
+</body>
+</html>

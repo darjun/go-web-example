@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-	"time"
 )
 
 func hello(w http.ResponseWriter, r *http.Request) {
@@ -20,7 +19,7 @@ func main() {
 		Handler:      mux,
 	}
 
-	i err := server.ListenAndServe(); err != nil {
-	log.Fatal(err)
+	if err := server.ListenAndServe(); err != nil {
+		log.Fatal(err)
 	}
 }
